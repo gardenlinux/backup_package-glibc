@@ -1,0 +1,8 @@
+name: glibc
+on: push
+jobs:
+  build_pkg:
+    uses: gardenlinux/package-build/.github/workflows/build_pkg.yml@main
+    with:
+      build_options: nodoc terse nocheck
+      build_profiles: nodoc nopython nocheck
